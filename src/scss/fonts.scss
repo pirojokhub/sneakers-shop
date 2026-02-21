@@ -1,0 +1,50 @@
+// font-family: "Ruda", sans-serif
+// font-family: "Montserrat", sans-serif;
+@font-face {
+	font-family: "Ruda", sans-serif;
+	src: url("../fonts/Ruda/Ruda-Regular.woff2") format("woff2");
+	font-weight: 400; /* Regular */
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Ruda", sans-serif;
+	src: url("../fonts/Ruda/Ruda-Bold.woff2") format("woff2");
+	font-weight: 700; /* Regular */
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Ruda", sans-serif;
+	src: url("../fonts/Ruda/Ruda-Black.woff2") format("woff2");
+	font-weight: 900; /* Regular */
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Montserrat", sans-serif;
+	src: url("../fonts/Montserrat/Montserrat-Regular.woff2") format("woff2");
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Montserrat", sans-serif;
+	src: url("../fonts/Montserrat/Montserrat-Black.woff2") format("woff2");
+	font-weight: 900;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Montserrat", sans-serif;
+	src: url("../fonts/Montserrat/Montserrat-SemiBold.woff2") format("woff2");
+	font-weight: 600;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Montserrat", sans-serif;
+	src: url("../fonts/Montserrat/Montserrat-Bold.woff2") format("woff2");
+	font-weight: 700;
+	font-style: normal;
+}

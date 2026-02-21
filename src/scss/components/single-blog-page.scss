@@ -1,0 +1,98 @@
+@use "../vars.scss";
+
+.single-blog {
+	font-family: "Ruda", sans-serif;
+	padding-bottom: 75px;
+	&__wrapper {
+		display: flex;
+		flex-direction: column;
+		gap: 40px;
+	}
+	&__title {
+		font-family: vars.$font-secondary;
+		font-weight: 900;
+		font-size: 64px;
+		line-height: 100%;
+		letter-spacing: 0%;
+		text-transform: uppercase;
+		color: vars.$color-blue;
+	}
+	&__date {
+		display: flex;
+		flex-direction: column;
+		align-items: last baseline;
+		span {
+			font-family: vars.$font-primary;
+			font-weight: 400;
+			font-size: 16px;
+			line-height: 100%;
+			letter-spacing: 0%;
+			color: vars.$color-blue;
+		}
+		&_watch {
+			display: flex;
+			align-items: center;
+			padding-left: 58px;
+		}
+	}
+	&__img img {
+		width: 1110px;
+		height: 1100px;
+		border-radius: 20px;
+	}
+	&__img_title {
+		font-family: vars.$font-primary;
+		color: rgba(255, 255, 255, 1);
+		font-weight: 400;
+		font-size: 24px;
+		line-height: 100%;
+		letter-spacing: 0%;
+		background: vars.$color-gray;
+	}
+	&__desp img {
+		width: 457px;
+		height: 291px;
+
+		// width: 346px;
+		// height: 250px;
+		border-radius: 20px;
+		margin-left: 8px;
+		margin-top: 18px;
+	}
+	&__desp {
+		display: flex;
+		justify-content: space-between;
+	}
+	&__text p {
+		font-family: vars.$font-primary;
+		font-weight: 400;
+		font-size: 24px;
+		line-height: 100%;
+		letter-spacing: 0%;
+		padding-bottom: 28px;
+		max-width: 665px;
+	}
+
+	&__text span {
+		font-weight: 400;
+	}
+	&__btn {
+		width: 349px;
+		border-radius: 50px;
+		background-color: #ff4d4d;
+		color: #fff;
+		cursor: pointer;
+		transition: background-color 0.2s ease-in-out;
+		padding: 31.5px 53px;
+
+		font-family: vars.$font-secondary;
+		font-weight: 700;
+		font-size: 18px;
+		line-height: 100%;
+		letter-spacing: 0%;
+	}
+}
+.single-blog__text strong,
+.single-blog__text b {
+	font-weight: bold; /* Или font-weight: 700; */
+}

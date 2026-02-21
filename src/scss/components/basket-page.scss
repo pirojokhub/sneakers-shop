@@ -1,0 +1,133 @@
+@use "../../scss/vars.scss";
+
+.card-page {
+	&__card {
+		// border: 1px solid #000;
+		display: flex;
+		border-radius: 70px;
+		box-shadow: 0px 3px 5px rgba(22, 92, 191, 0.1019607843);
+		position: relative;
+		margin-bottom: 20px	;
+	}
+	&__close-floating {
+		position: absolute;
+		// top: 0;
+		right: -10px;
+		width: 40px;
+		height: 40px;
+		background: #000;
+		border-radius: 50%;
+		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+		border: none;
+		cursor: pointer;
+		display: flex;
+		z-index: 1;
+		align-items: center;
+		justify-content: center;
+		transition: background 0.2s;
+
+		&:hover {
+			background: vars.$color-gray;
+		}
+		svg {
+			display: block;
+		}
+	}
+	&__img img {
+		max-width: 540px;
+		height: 311px;
+		// border-radius: 8px;
+		object-fit: contain;
+		border-bottom-left-radius: 70px;
+		border-top-left-radius: 70px;
+	}
+	&__info {
+		// width: 100%;
+		padding-top: 62px;
+		padding-left: 38px;
+	}
+	&__decoration {
+		padding-left: 94px;
+		padding-right: 143px;
+	}
+
+	&__title {
+		font-family: vars.$font-secondary;
+		font-weight: 700;
+		font-size: 36px;
+		line-height: 100%;
+		letter-spacing: 0%;
+		text-transform: uppercase;
+	}
+
+	&__sku {
+		font-family: vars.$font-primary;
+		font-weight: 400;
+		font-size: 18px;
+		line-height: 100%;
+		letter-spacing: 0%;
+		color: vars.$color-gray;
+		padding-top: 10px;
+	}
+
+	&__sizes {
+		display: flex;
+		align-items: center;
+		font-family: vars.$font-primary;
+		font-weight: 400;
+		font-size: 18px;
+		line-height: 100%;
+		letter-spacing: 0%;
+		margin-top: 10px;
+
+		span {
+			font-weight: 700;
+			color: vars.$color-blue;
+			padding-right: 41px;
+		}
+	}
+
+	&__price {
+		font-family: vars.$font-secondary;
+		font-weight: 700;
+		font-size: 36px;
+		line-height: 100%;
+		letter-spacing: 0%;
+		text-transform: uppercase;
+		color: vars.$color-primary;
+	}
+	&__btn {
+		margin-top: 65px;
+		margin-bottom: 20px;
+		padding: 28px 53px;
+		background: vars.$color-primary;
+		color: #fff;
+		width: 357px;
+		height: 85px;
+		border-radius: 50px;
+
+		font-family: vars.$font-secondary;
+		font-weight: 700;
+		font-size: 24px;
+		line-height: 100%;
+		letter-spacing: 0%;
+	}
+	&__btn:hover {
+		background: #fff;
+		color: vars.$color-primary;
+	}
+}
+.final-price {
+	font-family: vars.$font-secondary;
+	font-weight: 400;
+	font-size: 48px;
+	line-height: 100%;
+	letter-spacing: 0%;
+	margin-top: 86px;
+	margin-bottom: 86px;
+
+	span {
+		font-weight: 700;
+		color: vars.$color-blue;
+	}
+}

@@ -1,0 +1,107 @@
+@use "../vars.scss";
+
+.brends {
+	padding: 50px 0;
+	max-width: 1110px;
+	margin: 0 auto;
+
+	&-title {
+		font-family: vars.$font-secondary;
+		font-weight: 700;
+		font-size: 48px;
+		line-height: 100%;
+		letter-spacing: 0%;
+		color: vars.$color-blue;
+		padding-bottom: 40px;
+	}
+}
+.slider {
+	&-wrapper {
+		position: relative;
+		width: 100%;
+		margin: 0 auto;
+		display: flex;
+		align-items: center;
+		padding: 0 60px;
+		box-sizing: border-box;
+	}
+
+	&-track_brends {
+		overflow: hidden;
+		position: relative;
+		transition: transform 0.5s ease;
+		flex: 1;
+	}
+}
+
+.swiper-slide {
+	text-align: center;
+	border-radius: 8px;
+	background: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+// .card__image {
+// 	display: flex;
+// 	justify-content: center;
+// 	align-items: center;
+// 	// height: 150px;
+// 	margin-bottom: 10px;
+
+// 	img {
+// 		max-height: 100%;
+// 		max-width: 100%;
+// 		object-fit: contain;
+// 	}
+// }
+
+.swiper-nav {
+	display: flex;
+	justify-content: space-between;
+	position: absolute;
+	top: 50%;
+	left: 0;
+	right: 0;
+	transform: translateY(-50%);
+	pointer-events: none;
+
+	button {
+		pointer-events: all;
+		background: none;
+		border: none;
+		cursor: pointer;
+		padding: 10px;
+
+		svg path {
+			transition: fill 0.3s ease;
+		}
+
+		&:hover svg path {
+			fill: #4c84ff;
+		}
+	}
+
+	.custom-swiper-button-prev {
+		margin-left: 0;
+		left: 0;
+	}
+
+	.custom-swiper-button-next {
+		margin-right: 0;
+		right: 0;
+	}
+}
+@media (max-width: 768px) {
+	.swiper-slide {
+		margin: 10px 0;
+	}
+	.custom-swiper-button-next,
+	.custom-swiper-button-prev {
+		display: none;
+	}
+	.swiper-nav {
+		display: none;
+	}
+}

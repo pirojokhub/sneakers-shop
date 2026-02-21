@@ -1,0 +1,62 @@
+@use "../vars.scss";
+
+/* Переменные для цветов */
+$icon-color-inactive: #8d8d8d;
+$icon-color-active: #002c6a;
+$shadow-active: 0px 0px 15px rgba(0, 44, 106, 0.3);
+
+/* Общий контейнер страницы */
+.account-page .container {
+	display: flex;
+	gap: 30px; // Пространство между сайдбаром и контентом
+}
+
+/* Блок сайдбара */
+.account-sidebar {
+	display: flex;
+	flex-direction: column;
+	gap: 20px; // Пространство между кнопками
+
+	/* Элемент: ссылка (бывшая кнопка) */
+	&__link {
+		// border-radius: 12px;
+		border-top-right-radius: 70px;
+		border-bottom-right-radius: 70px;
+		padding: 20px;
+		text-decoration: none;
+		display: flex;
+		align-items: center;
+		gap: 15px;
+		color: $icon-color-inactive;
+		transition: all 0.3s ease;
+
+		svg path {
+			fill: currentColor; // Наследует цвет от родителя (от `color` ссылки)
+		}
+
+		span {
+			font-weight: 500;
+		}
+
+		/* Модификатор: активное состояние, которое NavLink добавляет сам */
+		&.is-active {
+			background-color: #fff;
+			color: vars.$color-primary;
+			box-shadow: $shadow-active;
+
+			span {
+				font-weight: 700;
+			}
+		}
+
+		&:not(.is-active):hover {
+			border-color: #ccc;
+			color: #555;
+		}
+	}
+}
+
+/* Блок для основного контента */
+.account-content {
+	flex-grow: 1; // Занимает все оставшееся пространство
+}

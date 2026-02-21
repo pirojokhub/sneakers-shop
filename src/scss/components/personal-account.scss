@@ -1,0 +1,57 @@
+// Импортируем переменные, если они у вас есть
+@use "../../vars.scss";
+
+.personal-account-layout {
+	display: flex;
+	max-width: 1200px;
+	margin: 40px auto; // Добавим отступы сверху и снизу
+	padding: 40px;
+	gap: 50px; // Расстояние между боковым меню и контентом
+	background-color: #f9f9f9; // Легкий фон для всей области
+	border-radius: 12px;
+	border: 1px solid #e7e7e7;
+
+	// Боковое меню (sidebar)
+	&__sidebar {
+		// Задаем фиксированную ширину, чтобы колонка не сжималась и не растягивалась
+		flex: 0 0 220px;
+		border-right: 1px solid #e7e7e7;
+		padding-right: 30px;
+	}
+
+	// Навигационное меню в sidebar
+	&__nav {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+
+		// Стилизуем NavLink (который рендерится как тег <a>)
+		a {
+			text-decoration: none;
+			color: vars.$color-text-secondary; // Цвет неактивной ссылки
+			font-size: 18px;
+			font-weight: 500;
+			padding: 8px 12px;
+			border-radius: 6px;
+			transition: color 0.2s ease, background-color 0.2s ease;
+
+			&:hover {
+				color: vars.$color-blue; // Цвет при наведении
+			}
+
+			// NavLink автоматически добавляет класс .active к активной ссылке
+			// Это позволяет нам легко ее стилизовать
+			&.active {
+				color: vars.$color-blue;
+				font-weight: 700;
+				background-color: #eef4ff; // Легкий фон для активной ссылки
+			}
+		}
+	}
+
+	// Область для основного контента
+	&__content {
+		// Занимает все оставшееся пространство
+		flex-grow: 1;
+	}
+}

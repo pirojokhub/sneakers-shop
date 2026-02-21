@@ -1,0 +1,83 @@
+.loader-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+  
+  .loader-box {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    perspective: 800px;
+    animation: rotateBox 2s infinite ease-in-out;
+  }
+  
+  .box-front,
+  .box-side,
+  .box-top {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid #333;
+    box-sizing: border-box;
+  }
+  
+  .box-front {
+    transform: translateZ(60px);
+  }
+  
+  .box-side {
+    transform: rotateY(90deg) translateZ(60px);
+  }
+  
+  .box-top {
+    transform: rotateX(90deg) translateZ(60px);
+    background: #ff0000; /* Красный акцент, отсылка к скидке */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+  }
+  
+  .brand-logo {
+    font-family: "Arial", sans-serif;
+    letter-spacing: 2px;
+  }
+  
+  .sneaker-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 40px;
+    animation: bounceSneaker 1s infinite alternate;
+  }
+  
+  @keyframes rotateBox {
+    0% {
+      transform: rotateX(0deg) rotateY(0deg);
+    }
+    100% {
+      transform: rotateX(360deg) rotateY(360deg);
+    }
+  }
+  
+  @keyframes bounceSneaker {
+    0% {
+      transform: translate(-50%, -50%) scale(1);
+    }
+    100% {
+      transform: translate(-50%, -50%) scale(1.2);
+    }
+  }

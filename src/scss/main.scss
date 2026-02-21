@@ -1,0 +1,27 @@
+// Шрифты
+@use "./fonts";
+
+//scss коспоненты
+@use "./components/app";
+@use "./components/header";
+@use "./components/hero.scss";
+@use "./components/best-product.scss";
+@use "./components/blogs.scss";
+@use "./components/brends.scss";
+@use "./components/krossovki.scss";
+@use "./components/blogs-page.scss";
+@use "./components/single-blog-page.scss";
+@use "./components/product-info.scss";
+@use "./components/basket-page.scss";
+@use "./components/account.scss";
+@use "./components/tabs-personal-account.scss";
+@use "./components/order-history.scss";
+
+@use "./components/footer.scss";
+
+// scss компоненты с Child
+@use "./components/child/pagination.scss";
+
+//Сбрось стилей
+@import "./reset.css";
+

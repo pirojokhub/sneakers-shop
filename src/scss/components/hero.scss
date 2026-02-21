@@ -1,0 +1,173 @@
+@use "../vars.scss";
+
+.product-hero {
+	position: relative;
+	margin-bottom: 178px;
+
+	.hero-wrapper {
+		max-width: 1110px;
+		margin: 0 auto;
+		position: relative;
+	}
+
+	.hero-content {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		position: relative;
+		overflow: hidden;
+	}
+
+	.product-info {
+		max-width: 516px;
+
+		&_title {
+			font-family: vars.$font-primary;
+			font-weight: 900;
+			font-size: 62px;
+			line-height: 100%;
+			letter-spacing: 0%;
+			color: vars.$color-blue;
+			width: 100%;
+		}
+
+		&_subtitle {
+			font-family: vars.$font-secondary;
+			font-weight: 400;
+			font-size: 36px;
+			line-height: 100%;
+			letter-spacing: 0%;
+
+			margin: 1rem 0 2rem;
+		}
+	}
+
+	.view-all {
+		background: #ff3e3e;
+		color: #fff;
+		padding: 28px 53px;
+		border: none;
+		border-radius: 50px;
+		font-size: 16px;
+		font-weight: 600;
+		cursor: pointer;
+		transition: background 0.3s ease;
+
+		&:hover {
+			background: #e52d2d;
+			box-shadow: 0 10px 25px rgba(255, 62, 62, 0.3);
+		}
+	}
+	.product-image {
+		position: relative;
+		// z-index: 2;
+		overflow: hidden;
+
+		img {
+			position: relative;
+			z-index: 1;
+			max-width: 549px;
+			max-height: 447px;
+			object-fit: contain;
+			overflow: hidden;
+		}
+	}
+
+	.slider-controls {
+		width: 794px;
+		margin-top: 3rem;
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		gap: 2rem;
+		position: absolute;
+		bottom: -100px; // Подкорректируй под макет
+		left: 90%;
+		transform: translateX(-50%);
+		z-index: 1;
+	}
+
+	.next-slide-btn {
+		background: none;
+		border: none;
+		cursor: pointer;
+		position: absolute;
+		right: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		z-index: 2;
+	}
+
+	.brand-thumbnails {
+		display: flex;
+		gap: 1.5rem;
+	}
+
+	.brand-thumbnail {
+		display: flex;
+		align-items: center;
+		background: white;
+		border-radius: 20px;
+		padding: 0.75rem 1rem;
+		box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
+		gap: 1rem;
+		cursor: pointer;
+		transition: transform 0.3s ease;
+
+		&.active {
+			transform: translateY(-8px);
+		}
+
+		img {
+			max-height: 50px;
+			object-fit: contain;
+		}
+
+		.brand-caption {
+			display: flex;
+			align-items: center;
+			gap: 0.75rem;
+
+			h4 {
+				font-size: 12px;
+				font-weight: 700;
+				color: #29292d;
+				margin: 0;
+			}
+
+			.arrow {
+				background: #ff3e3e;
+				border: none;
+				border-radius: 50%;
+				width: 30px;
+				height: 30px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				padding: 0;
+				cursor: pointer;
+
+				svg {
+					width: 14px;
+					height: 14px;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.product-hero .hero-content {
+		flex-direction: column;
+		text-align: center;
+
+		.product-image {
+			margin-top: 2rem;
+		}
+	}
+
+	.product-hero .slider-controls {
+		flex-direction: column;
+		align-items: center;
+	}
+}

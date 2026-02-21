@@ -1,0 +1,88 @@
+@use "../vars.scss";
+
+$text-color-dark: #2d3748;
+$text-color-light: #4a5568;
+$header-color: #005bff;
+$border-color: #e2e8f0;
+$active-row-bg: #f0f5ff;
+$checkbox-checked-bg: #e53e3e;
+$checkbox-border-color: #cbd5e0;
+$border-radius: 8px;
+
+.orders-table {
+	width: 100%;
+	border-collapse: separate;
+	border-spacing: 0;
+	color: $text-color-dark;
+
+	&__header {
+		.orders-table__cell {
+			font-family: vars.$font-secondary;
+			color: vars.$color-blue;
+			font-weight: 600;
+			text-align: left;
+			font-size: 14px;
+		}
+	}
+
+	&__body {
+		.orders-table__cell {
+			color: $text-color-light;
+			font-weight: 500;
+		}
+	}
+
+	&__row {
+		&--active {
+			background-color: $active-row-bg;
+
+			.orders-table__cell:first-child {
+				border-top-left-radius: $border-radius;
+				border-bottom-left-radius: $border-radius;
+			}
+			.orders-table__cell:last-child {
+				border-top-right-radius: $border-radius;
+				border-bottom-right-radius: $border-radius;
+			}
+		}
+	}
+
+	&__cell {
+		padding: 16px;
+		color: #2d3748;
+		font-family: vars.$font-primary;
+		font-weight: 400;
+		font-size: 18px;
+		line-height: 100%;
+		letter-spacing: 0%;
+	}
+
+	&__link {
+		color: #2d3748;
+		font-family: vars.$font-primary;
+		font-weight: 400;
+		font-size: 18px;
+		line-height: 100%;
+		letter-spacing: 0%;
+
+		&:hover {
+			text-decoration: none;
+		}
+	}
+
+	&__checkbox {
+		width: 22px;
+		height: 22px;
+		border: 2px solid $checkbox-border-color;
+		border-radius: 20px / 2;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		transition: background-color 0.2s, border-color 0.2s;
+
+		&--checked {
+			background-color: $checkbox-checked-bg;
+			border-color: $checkbox-checked-bg;
+		}
+	}
+}

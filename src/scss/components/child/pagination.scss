@@ -1,0 +1,100 @@
+@use "../../vars.scss";
+
+.catalog__pagination {
+	// <--- ИСПРАВЛЕН КЛАСС
+	display: flex;
+	justify-content: center; // Центрируем блок пагинации
+	margin-top: 50px; // Отступ сверху от сетки товаров (настрой)
+	padding-bottom: 30px; // Отступ снизу секции каталога
+}
+
+// Список страниц (<ul>)
+.pagination__list {
+	// <--- ИСПРАВЛЕН КЛАСС
+	display: flex;
+	align-items: center; // Выравниваем элементы по вертикали
+	list-style: none; // Убираем маркеры списка
+	padding: 0;
+	margin: 0;
+	gap: 8px; // Расстояние между элементами пагинации (настрой)
+}
+
+// Элемент списка (<li>)
+.pagination__item {
+	// <--- ИСПРАВЛЕН КЛАСС (был с __)
+	// Сюда можно добавить стили для li, если нужно
+}
+
+// Общие стили для кнопок и некликабельных элементов (троеточие)
+// для одинакового размера и выравнивания
+.pagination__button,    // <--- ИСПРАВЛЕН КЛАСС
+.pagination__ellipsis {
+	// <--- ИСПРАВЛЕН КЛАСС
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-width: 38px; // Минимальная ширина
+	height: 38px; // Высота
+	padding: 5px 10px; // Внутренние отступы (для текста)
+	border-radius: 4px; // Скругление углов
+	font-family: vars.$font-secondary; // Установи твой шрифт
+	font-size: 16px; // Размер шрифта (настрой)
+	line-height: 1; // Убираем лишнюю высоту строки
+	text-align: center;
+	box-sizing: border-box; // Учитываем padding и border в размере
+}
+
+// Стили только для КНОПОК
+.pagination__button {
+	// <--- ИСПРАВЛЕН КЛАСС
+	border: 1px solid #e0e0e0; // Светло-серая рамка по умолчанию (настрой цвет)
+	background-color: transparent; // Прозрачный фон
+	color: #555; // Цвет текста по умолчанию (серый)
+	font-weight: 500;
+	cursor: pointer;
+	transition: background-color 0.2s ease, color 0.2s ease,
+		border-color 0.2s ease;
+
+	// Эффект при наведении (только если кнопка не отключена)
+	&:hover:not(:disabled) {
+		background-color: #f5f5f5; // Легкий фон при наведении
+		border-color: #ccc;
+		color: #000;
+	}
+
+	// Стиль для отключенной кнопки (текущая страница)
+	&:disabled {
+		cursor: default;
+	}
+}
+
+// Стили для АКТИВНОЙ кнопки/страницы (через класс у родительского li)
+.pagination__item--active .pagination__button {
+	// <--- ИСПРАВЛЕН КЛАСС
+	background-color: vars.$color-primary; // Основной синий цвет (из переменных)
+	color: #fff; // Белый текст
+	border-color: vars.$color-blue;
+	font-weight: 700; // Жирный шрифт
+
+	// Убираем эффект hover для активного элемента
+	&:hover {
+		background-color: vars.$color-blue;
+		border-color: vars.$color-blue;
+	}
+}
+
+// Стили для неактивных/отключенных элементов LI (например, троеточие)
+.pagination__item--disabled {
+	// <--- ИСПРАВЛЕН КЛАСС (был с __)
+	// Можно добавить стили для li, если нужно
+}
+
+// Стили для троеточия (<span> внутри li)
+.pagination__ellipsis {
+	// <--- ИСПРАВЛЕН КЛАСС
+	border: none; // Убираем рамку у троеточия
+	color: #999; // Цвет для троеточия
+	cursor: default;
+	padding-left: 4px; // Чуть меньше отступ слева
+	padding-right: 4px; // Чуть меньше отступ справа
+}
